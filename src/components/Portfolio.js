@@ -1,24 +1,37 @@
 import React from 'react';
 
-function About() {
+function Portfolio() {
   return (
-    <section id="about">
+    <section id="projects">
       <div className="container">
-        <h1 className="sub-title">About Me</h1>
-        <div className="about-list">
-          <div className="about">
-            <h3>About</h3>
+        <h1 className="sub-title">Projects</h1>
+        <div className="project-list">
+          <div className="card">
+            <h3>Project 1</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam nisl, eget interdum lorem odio in est. Nam commodo urna eget nunc cursus interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis laoreet eros quis odio tincidunt euismod. Proin ut diam ipsum. Donec vulputate, erat sit amet rutrum rutrum, odio nulla semper sem, id pulvinar felis velit at neque.
+              Project 1 description
+              <a href="https://didriklindberg.github.io/savvy-chef/">
+                <img src="./assets/2023-04-13 23.03.34.gif" alt="Project1" />
+              </a>
             </p>
           </div>
-          <div className="about">
-            <h3>Experience</h3>
-            <ul>
-              <li>Company A - Software Developer</li>
-              <li>Company B - Web Developer</li>
-              <li>Company C - Frontend Engineer</li>
-            </ul>
+          <div className="card">
+            <h3>Project 2</h3>
+            <p>
+              Project 2 description
+              <a href="https://memomates.herokuapp.com/login">
+                <img src="./assets/images/Screenshot 2023-05-11 105012.png" alt="Project2" />
+              </a>
+            </p>
+          </div>
+          <div className="card">
+            <h3>Project 3</h3>
+            <p>
+              Project 3 description
+              <a href="https://www.youtube.com/watch?v=eBGIQ7ZuuiU">
+                <img src="./assets/images/7365622-middle.png" alt="Project3" />
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -26,4 +39,4 @@ function About() {
   );
 }
 
-export default About;
+export default Portfolio;
