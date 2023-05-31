@@ -6,6 +6,8 @@ function ContactForm() {
   const [message, setMessage] = useState('');
   const [nameError, setNameError] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [messageError, setMessageError] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -19,21 +21,47 @@ function ContactForm() {
 
   const handleMessageChange = (e) => {
     setMessage(e.target.value);
+    setMessageError(false);
+  };
+
+  const handleNameBlur = () => {
+    if (!name) {
+      setNameError(true);
+    }
+  };
+
+  const handleEmailBlur = () => {
+    if (!email) {
+      setEmailError(true);
+    } else if (!validateEmail(email)) {
+      setEmailError(true);
+    }
+  };
+
+  const handleMessageBlur = () => {
+    if (!message) {
+      setMessageError(true);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate name and email fields
+    // Validate name, email, and message fields
     if (!name) {
       setNameError(true);
     }
     if (!email) {
       setEmailError(true);
+    } else if (!validateEmail(email)) {
+      setEmailError(true);
+    }
+    if (!message) {
+      setMessageError(true);
     }
 
     // Submit form if all fields are valid
-    if (name && email) {
+    if (name && email && message) {
       // TODO: Perform form submission or other necessary actions
       console.log('Form submitted:', { name, email, message });
 
@@ -41,7 +69,20 @@ function ContactForm() {
       setName('');
       setEmail('');
       setMessage('');
+
+      // Display success toast
+      setIsSubmitted(true);
+
+      // Reset success toast after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 3000);
     }
+  };
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
   };
 
   return (
@@ -57,6 +98,7 @@ function ContactForm() {
               name="name"
               value={name}
               onChange={handleNameChange}
+              onBlur={handleNameBlur}
               required
             />
             {nameError && <p className="error">Name is required</p>}
@@ -69,9 +111,10 @@ function ContactForm() {
               name="email"
               value={email}
               onChange={handleEmailChange}
+              onBlur={handleEmailBlur}
               required
             />
-            {emailError && <p className="error">Invalid email address</p>}
+            {emailError && <p className="error">Please use a valid email address</p>}
           </div>
           <div className="form-group">
             <label htmlFor="message">Message:</label>
@@ -80,10 +123,14 @@ function ContactForm() {
               name="message"
               value={message}
               onChange={handleMessageChange}
+              onBlur={handleMessageBlur}
+              required
             />
+            {messageError && <p className="error">Message is required</p>}
           </div>
           <button type="submit">Submit</button>
         </form>
+        {isSubmitted && <div className="success-toast">Submitted!</div>}
       </div>
     </section>
   );

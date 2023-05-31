@@ -3,7 +3,9 @@ import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-// import Footer from './Footer';
+import Resume from './components/Resume';
+import Footer from './components/Footer';
+import './App.css';
 
 function App() {
   const [activeComponent, setActiveComponent] = useState('About');
@@ -16,6 +18,8 @@ function App() {
         return <Portfolio />;
       case 'Contact':
         return <Contact />;
+      case 'Resume':
+        return <Resume />;
       default:
         return null;
     }
@@ -25,7 +29,7 @@ function App() {
     <div>
       <Header setActiveComponent={setActiveComponent} />
       {renderComponent()}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
