@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global attribute of a dark blue background */
+:root {
+    --secondary-color: #161f2a;
+    --primary-color: #212f3f;
+    --hover-color: #b3cbe7;
+}
+
+* {
+  /* give global font family */
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+header h2{
+  position: absolute;
+  margin-top: 15%;
+  font-size: 30px;
+}
+header h2 span{
+  color: var(--hover-color);
+  font-weight: bolder;
+}
+
+
+
+body {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* style headder as a horizontal box */
+header {
+padding: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+color: white;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 24px;
+  color: white;
+
+}
+
+
+header nav {
+  padding: 0%;
+  margin: auto;
+  float: right;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+header nav a {
+  list-style: none;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+#img {
+  height: 500px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url("../images/digital-marketing-meeting.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/*------------------------------ style the projects section --------------------------------*/
+/* overall styling for main section */
+#projects {
+  padding: 250px;
+  margin-top: 10%;
+  color: white;
+  margin-bottom: 105px;
+  margin-right: 10px;
+  margin-left: 10px;
+  /* force grid card to next line if it cant fit */
+  display: flex;
+  flex-wrap: wrap;
+  /* justify content to center grid */
+  justify-content: center;
+  text-align: center;
+}
+#projects h1{
+  text-align: left;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+/* styling of card container */
+.project-list {
+  display: grid;
+
+  
+
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  grid-gap: 30px;
+  padding: 40px;
+  /* force grid card to next line if it cant fit */
+  /* display: flex;
+  flex-wrap: wrap; */
+}
+
+
+
+
+.project-list .card {
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  /* give card minimum width */
+  grid-column: span 1;
+  padding: 40px;  
+  margin: 20px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  flex: 1 0 0;
+/* transition element */
+  transition: transform 0.5s;
+  justify-content: center;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.479);
+
+  
+}
+
+  .card1  {
+  background-color: var(--secondary-color);
+  /* give card minimum width */
+  grid-column: span 2;
+  margin: 20px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.479);
+  padding: 40px;
+  border-radius: 10px;
+  justify-content: center;
+  transition: transform 0.5s;
+
+  }
+
+
+/* style the h3 */
+.project-list h3 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+/* style the paragraphs */
+.project-list p {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* remove styling from the a tag */
+.project-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: none;
+}
+/* style the img */
+.project-list img {
+  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: 100%;
+}
+
+.project-list a {
+  text-decoration: none;
+  padding: 40px;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* style the change for cards when hovering */
+.container .card:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+}
+.container .card1:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+}
+
+/* ----------------Skills section-------------------- */
+#skills {
+  padding: 50px;
+  margin-top: 10%;
+  margin-bottom: 105px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#skills h1{
+  text-align: left;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+.skills-list img {
+  width: 10%;
+  margin-bottom: 20px;
+  min-height: 55%;
+}
+
+
+/* ---------About Me------------- */
+#about {
+  padding: 50px;
+  margin-top: 10%;
+  margin-bottom: 105px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* center text */
+  background: whit;
+}
+#about h1{
+  text-align: left;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+
+
+/* -------------contact---------------- */
+
+.row  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 105px;
+  padding: 50px;
+}
+.contact-left{
+  flex-basis: 35%;
+}
+.contact-right{
+  flex-basis: 60%;
+}
+.contact-left p{
+  margin-top: 30px;
+  margin-left: 25px;
+}
+.contact-right form{
+  width: 100%;
+}
+form input, form textarea{
+  width: 100%;
+  background: #14202e;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  color: white;
+  margin: 15px;
+  font-size: 15px;
+  border-radius: 6px;
+}
+form .btn2{
+  padding: 5px 60px;
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+footer {
+  background-color: #bcbec0;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  display: inline-block;
+  width: 100%;
+  
+}
+
+/* multiple media accessability */
+@media screen and (max-width: 992px) {
+  .card {
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .card1 { 
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: auto;
+}
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+
