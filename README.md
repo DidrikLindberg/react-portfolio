@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# React Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio website built using React. It showcases my skills, projects, and provides information about me.
+<!-- Deployed site with alink -->
+[Deployed Site](https://didriklindberg.github.io/react-portfolio/)
 
-## Available Scripts
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![JavaScript](https://img.shields.io/badge/JavaScript-%E2%9C%A8-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![node.js](https://img.shields.io/badge/node.js-%E2%9C%A8-green)](https://nodejs.org/en)
+[![Express.js](https://img.shields.io/badge/Express.js-%F0%9F%8C%90-green)](https://expressjs.com/)
+[![React.js](https://img.shields.io/badge/React.js-%F0%9F%8C%90-blue)](https://reactjs.org/)
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technology Used 🖥️
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+| Technology Used         | Resource URL           | 
+| ------------- |:-------------:| 
+| JavaScript | [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)     |  
+| React.js | [https://reactjs.org/](https://reactjs.org/)     |
+| node.js | [https://nodejs.org/en](https://nodejs.org/en)     |     
+| Express.js | [https://expressjs.com/](https://expressjs.com/)     |     
+| CSS | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)         |   
+| Git | [https://git-scm.com/](https://git-scm.com/)     |   
 
-### `npm test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- About section with a brief introduction and profile picture.
+- Portfolio section displaying a list of projects with project descriptions and links to live demos and source code repositories.
+- Contact section with a contact form for users to reach out.
+- Resume section with a download link to the resume in PDF format.
+- Footer section with links to the developer's GitHub, LinkedIn, and other social media profiles.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+```bash
+git clone https://github.com/DidrikLindberg/react-portfolio.git
+```
+2. Navigate to the project directory:
+```bash
+cd react-portfolio
+```
+3. Install the dependencies:
+```bash
+npm install
+```
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Start the development server:
+```bash
+npm start
+```
+2. Open your web browser and visit http://localhost:3000 to view the portfolio.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technologies
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+React: JavaScript library for building user interfaces.
+HTML5: Markup language for structuring web pages.
+CSS3: Styling language for designing web pages.
+FontAwesome: Icon library for adding icons to the portfolio.
+Other dependencies: Check the package.json file for a full list of dependencies.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+License
+This project is licensed under the MIT License.
