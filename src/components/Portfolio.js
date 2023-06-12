@@ -23,9 +23,9 @@ function Portfolio() {
     {
       title: 'Project 3',
       description: 'Project 3 description',
-      demoLink: 'https://www.youtube.com/watch?v=eBGIQ7ZuuiU',
-      repoLink: 'https://github.com/username/project3',
-      imageSrc: './assets/images/7365622-middle.png',
+      demoLink: 'https://budgetbetter.herokuapp.com/',
+      repoLink: 'https://github.com/sheaschwenn/budget-better',
+      imageSrc: './assets/images/screen-shot-2023-06-12-145430.png',
       altText: 'Project3',
     },    {
       title: 'Social Network Backend API Endpoints',
