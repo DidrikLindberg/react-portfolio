@@ -25,7 +25,7 @@ function Portfolio() {
       description: 'Project 3 description',
       demoLink: 'https://budgetbetter.herokuapp.com/',
       repoLink: 'https://github.com/sheaschwenn/budget-better',
-      imageSrc: './assets/images/screen-shot-2023-06-12-145430.png',
+      imageSrc: './assets/images/project3.png',
       altText: 'Project3',
     },    {
       title: 'Social Network Backend API Endpoints',
