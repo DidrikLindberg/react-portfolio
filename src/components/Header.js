@@ -1,78 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Header({ setActiveComponent }) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const handleButtonClick = (componentName) => {
-    setActiveComponent(componentName);
-    setIsMenuOpen(false); // Close the menu when a menu item is clicked
-  };
-
+function Header() {
   return (
     <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-dark ">
         <div className="container">
-          <button className="navbar-brand" onClick={() => handleButtonClick('About')}>
-            Didrik Lindberg
-          </button>
+          <a className="navbar-brand" href="#about">Portfolio</a>
           <button
-            className={`navbar-toggler ${isMenuOpen ? 'collapsed' : ''}`}
+            className="navbar-toggler"
             type="button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+          <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <button className="nav-link" onClick={() => handleButtonClick('About')}>
-                  About
-                </button>
+                <a className="nav-link" href="#about">About</a>
               </li>
               <li className="nav-item">
-                <button className="nav-link" onClick={() => handleButtonClick('Portfolio')}>
-                  Portfolio
-                </button>
+                <a className="nav-link" href="#portfolio">Portfolio</a>
               </li>
               <li className="nav-item">
-                <button className="nav-link" onClick={() => handleButtonClick('Contact')}>
-                  Contact
-                </button>
+                <a className="nav-link" href="#contact">Contact</a>
               </li>
               <li className="nav-item">
-                <button className="nav-link" onClick={() => handleButtonClick('Resume')}>
-                  Resume
-                </button>
+                <a className="nav-link" href="#resume">Resume</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-      <div className={`menu-overlay ${isMenuOpen ? 'open' : ''}`} onClick={() => setIsMenuOpen(false)}></div>
-      <div className={`menu-container ${isMenuOpen ? 'open' : ''}`}>
-        <ul className="navbar-nav">
-          <li className="nav-item">
-            <button className="nav-link" onClick={() => handleButtonClick('About')}>
-              About
-            </button>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link" onClick={() => handleButtonClick('Portfolio')}>
-              Portfolio
-            </button>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link" onClick={() => handleButtonClick('Contact')}>
-              Contact
-            </button>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link" onClick={() => handleButtonClick('Resume')}>
-              Resume
-            </button>
-          </li>
-        </ul>
-      </div>
     </header>
   );
 }

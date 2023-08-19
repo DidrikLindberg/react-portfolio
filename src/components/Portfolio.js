@@ -52,7 +52,7 @@ function Portfolio() {
   ];
 
   return (
-    <section id="projects">
+    <section id="portfolio">
       <div className="container">
         <h1 className="sub-title">Projects</h1>
         <div className="project-list">

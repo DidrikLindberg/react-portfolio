@@ -13,20 +13,97 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+/* Add these styles to your App.css file */
+
+/* Ensure the sections take up the full viewport height */
+#about, #portfolio, #contact, #resume {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
-.App-link {
+/* Adjust the container width to control side margins */
+.container {
+  max-width: 1200px; /* Change this value as needed */
+  padding: 0 15px; /* Add horizontal padding to create side margins */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Smooth scrolling behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------header--------------------------- */
+header {
+  background-color: #133c55;
+}
+
+/* -------------------------homepage--------------------- */
+.homepage {
+  background-color: #f8f9fa;
+  padding: 100px 0;
+}
+
+.homepage h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.homepage p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.homepage .btn {
+  font-size: 18px;
+}
+
+.homepage img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------------------------homepage--------------------- */
+/* -------------------------about------------------------ */
+.about {
+  padding: 100px 0;
+}
+
+.about .avatar {
+  text-align: center;
+}
+
+.about .avatar .icon {
   color: #61dafb;
 }
+
+.about .sub-title {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.about .card {
+  margin-top: 40px;
+}
+
+.about .card-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about .card-text {
+  font-size: 16px;
+}
+
+.about .list-group-item {
+  font-size: 16px;
+  border: none;
+  padding: 8px 0;
+}
+/* -------------------------about------------------------ */
+
 
 @keyframes App-logo-spin {
   from {

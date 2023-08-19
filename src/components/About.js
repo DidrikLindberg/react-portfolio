@@ -1,15 +1,13 @@
-import React from 'react';
-import './App.css';
+import React, { forwardRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
-
-function About() {
+const About = forwardRef((props, ref) => {
   return (
-    <section id="about" className="container">
+    <section id="about" className="about container" ref={ref}>
       <div className="avatar">
-          <FontAwesomeIcon icon={faUserCircle} size="4x" />
-        </div>
+        <FontAwesomeIcon icon={faUserCircle} size="4x" className="icon" />
+      </div>
       <h1 className="sub-title">About Me</h1>
       <div className="row">
         <div className="col-md-6">
@@ -37,6 +35,6 @@ function About() {
       </div>
     </section>
   );
-}
+});
 
 export default About;

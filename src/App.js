@@ -1,34 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
+import Homepage from './components/Homepage';
 import './App.css';
 
 function App() {
-  const [activeComponent, setActiveComponent] = useState('About');
-
-  const renderComponent = () => {
-    switch (activeComponent) {
-      case 'About':
-        return <About />;
-      case 'Portfolio':
-        return <Portfolio />;
-      case 'Contact':
-        return <Contact />;
-      case 'Resume':
-        return <Resume />;
-      default:
-        return null;
-    }
-  };
-
   return (
     <div>
-      <Header setActiveComponent={setActiveComponent} />
-      {renderComponent()}
+      <Header />
+      <div id="homepage"><Homepage /></div>
+      <div id="about"><About /></div>
+      <div id="portfolio"><Portfolio /></div>
+      <div id="contact"><Contact /></div>
+      <div id="resume"><Resume /></div>
       <Footer />
     </div>
   );
