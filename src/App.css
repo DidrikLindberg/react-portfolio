@@ -7,28 +7,13 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 /* Add these styles to your App.css file */
 
-/* Ensure the sections take up the full viewport height */
-#about, #portfolio, #contact, #resume {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
+/*--------------------- Portfolio ---------------------------------------*/
+
+
 
 /* Adjust the container width to control side margins */
-.container {
-  max-width: 1200px; /* Change this value as needed */
-  padding: 0 15px; /* Add horizontal padding to create side margins */
-  margin: 0 auto; /* Center the container horizontally */
-}
 
 /* Smooth scrolling behavior */
 html {
@@ -43,6 +28,9 @@ html {
 /* Header.css */
 /* Header.css */
 /* Header.css */
+/* Header.css */
+/* Header.css */
+/* Header.css */
 header {
   position: fixed;
   top: 0;
@@ -54,6 +42,7 @@ header {
   align-items: center;
   padding: 20px;
   background: none;
+  background-color: transparent; /* Set a transparent background */
 }
 
 .header {
@@ -71,17 +60,20 @@ header {
 .nav-list {
   list-style: none;
   display: flex;
+  font-family: 'Poppins', sans-serif;
+
   align-items: center;
   margin: 0;
   padding: 0;
+  /* Remove position: absolute; to allow links to flow in the normal document flow */
 }
 
 .nav-list li {
-  margin-left: 80px;
+  margin-left: 20px; /* Adjust the spacing between links */
 }
 
 .nav-link {
-  color: #656565;
+  color: #ffffff; /* Set link color to white */
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s;
@@ -91,16 +83,22 @@ header {
   color: #06478d;
 }
 
+/* Remove logo styles */
 .logo-container {
   display: flex;
   align-items: center;
-  
 }
 
 .logo {
-  width: 90px;
-  height: auto;
-  margin-right: 10px;
+  display: none; /* Hide the logo image */
+}
+
+.header-title {
+  color: #ffffff; /* Set text color to white */
+  font-size: 44px;
+  font-family: 'Poppins', sans-serif;
+  text-align: right; /* Center the text horizontally */
+  flex: 1; /* Allow the text to expand and take up space */
 }
 
 
@@ -110,149 +108,165 @@ header {
 /* Homepage.css */
 
 /* Use a modern font from Google Fonts or other sources */
-.homepage {
-font-family: 'Glober', sans-serif;
-color: #333; /* Set the text color */
-padding: 200px 0;
-text-align: center;
-height: 100vh;
-}
+/* Add this CSS to your stylesheet for styling the new homepage */
 
-.homepage h1 {
-font-size: 68px; /* Increased font size */
-margin-bottom: 20px;
-font-weight: 900; /* Use a bold font weight */
-}
+/* Add this CSS to your stylesheet for styling the new homepage */
 
-.homepage p {
-font-size: 24px; /* Increased font size */
-margin-bottom: 30px;
-line-height: 1.6;
-font-weight: 700; /* Use a semi-bold font weight */
-}
 
-.homepage .btn {
-font-size: 18px; /* Increased font size */
-background-color: #007bff;
-color: #fff;
-border: none;
-padding: 10px 20px;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s;
-}
+  .homepage {
+    transition: padding-bottom 0.3s ease; /* You can adjust the transition duration */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 200px 0; /* Increase the padding to adjust the height */
+    font-family: 'Poppins', sans-serif;
+  }
 
-.homepage .btn:hover {
-background-color: #0056b3;
-}
+  .homepage h1 {
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 
-.homepage img {
-max-width: 100%;
-height: auto;
-}
-
-.homepage .image-container {
-max-width: 350px; /* Set your desired maximum width */
-margin: 0 auto; /* Center the image horizontally */
-}
-
-.homepage .image {
-width: 100%;
-height: auto; /* Maintain aspect ratio */
-}
 
 
 /* -------------------------homepage--------------------- */
-/* -------------------------about------------------------ */
-/* Add these styles to your About.css file */
-
-/* Add these styles to your About.css file */
-
-/* Add these styles to your About.css file */
-
-/* About.css */
-.about {
-  background-color: #fefefe;
-  padding: 0; /* Set padding to 0 */
-  margin: 0; /* Set margin to 0 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100vw;
-}
-
-.about .card {
-  border: none;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  margin: 0; /* Set margin to 0 */
-  width: 100vw;
-
-}
 
 
-/* ----------------------------------------Projects-------------------------- */
 
+
+/* -------------------------Portfolio-------------------- */
+
+/* Portfolio.css */
+
+/* Adjust circle size and spacing */
+/* Portfolio.css */
+
+/* Adjust circle size and spacing */
+/* Portfolio.css */
+
+/* Adjust circle size */
+/* Portfolio.css */
+
+/* Reduce margin on the sides of the master container */
+/* Portfolio.css */
+
+/* Remove margin and padding from the sides of the container */
+
+
+/* Adjust circle size */
 .portfolio {
-  background-color: #d3e9ff;
-  width: 100vw;
+  background-color: #fff4f4; /* Pastel yellow background color */
+  padding: 80px 0; /* Adjust the padding as needed */
+  font-family: 'Poppins', sans-serif;
+
+}
+.project-card {
+  flex: 1;
+  max-width: calc(33.33% - 40px); /* Adjust the percentage and margin for spacing between cards */
+  text-align: center;
+  margin: 20px; /* Increase the margin for more spacing between cards */
+  transition: transform 0.3s ease;
 }
 
-.container {
-  max-width: 1200px;
-  padding: 0 15px;
+.project-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
   margin: 0 auto;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sub-title {
   font-size: 28px;
-  color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+.portfolio {
+  padding: 40px 0; /* Adjust the padding as needed */
 }
 
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* Media query for responsiveness */
+@media (max-width: 767px) {
+  .project-card {
+    max-width: 100%;
+  }
+
+  .project-circle {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-.card {
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: calc(33.33% - 20px);
-  margin-bottom: 30px;
-  transition: transform 0.2s;
+
+
+/* -------------------------about------------------------ */
+#about-me {
+  position: relative; /* Add this to establish a positioning context for the overlay */
+  background-color: #aeadad; /* Slightly dark gray background */
+  padding: 80px 0; /* Adjust the padding as needed */
+  overflow: hidden; /* Hide content that overflows the section */
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.about-card,
+.skills-card {
+  position: relative; /* Add this to establish a positioning context for the overlay */
+  background-color: #ffffff; /* White background for cards */
+  padding: 30px; /* Padding inside the cards */
+  border-radius: 10px; /* Rounded corners for cards */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
 }
 
-.card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #333;
+.section-title {
+  font-size: 28px; /* Title font size */
+  color: #333; /* Title text color */
+  margin-bottom: 20px; /* Space below the title */
 }
+
+.lead {
+  font-size: 18px; /* Lead font size */
+  color: #555; /* Lead text color */
+}
+
+.list-unstyled {
+  padding-left: 0; /* Remove list padding */
+  margin-top: 20px; /* Space above the skills list */
+}
+
+.list-unstyled li {
+  margin-bottom: 10px; /* Space between list items */
+  font-size: 16px; /* List item font size */
+  color: #333; /* List item text color */
+}
+
+/* Add media query for small screens */
+@media (max-width: 767px) {
+  .col-lg-6 {
+    margin-bottom: 30px; /* Space between columns on small screens */
+  }
+
+  .about-card,
+  .skills-card {
+    padding: 20px; /* Adjust card padding on small screens */
+  }
+}
+
+
+
+
 
 /* ... other styles for your card content */
 
 
 /* Add these styles to your About.css file */
-.fade-slide {
-  opacity: 0;
-  transform: translateX(100px);
-  transition: opacity 100s ease-out, transform 100s ease-out; /* Increase duration to slow down */
-}
 
-.fade-slide.fade-in {
-  opacity: 1;
-  transform: translateX(0);
-}
 
 
 @keyframes fadeInRight {
@@ -262,12 +276,7 @@ height: auto; /* Maintain aspect ratio */
   }
 }
 
-/* Add media query to adjust padding based on screen width */
-@media (max-width: 768px) {
-  .about {
-    padding: 20px 0; /* Adjust padding for smaller screens */
-  }
-}
+
 
 
 /* -------------------------about------------------------ */
@@ -309,3 +318,5 @@ height: auto; /* Maintain aspect ratio */
     transform: rotate(360deg);
   }
 }
+
+

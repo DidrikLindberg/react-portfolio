@@ -6,8 +6,8 @@ import { faGithub, faLinkedin, faStackOverflow, faTwitter } from '@fortawesome/f
 function Footer() {
   return (
     <footer>
-      <div className="container">
-        <div className="social-icons">
+      <div className="container py-6">
+        <div className="social-icons py-6">
           <a href="https://github.com/didriklindberg" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} className="icon" />
           </a>

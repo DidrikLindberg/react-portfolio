@@ -3,85 +3,72 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 const projects = [
-  {
-    title: 'Project 1',
-    description: 'Project 1 description',
-    demoLink: 'https://didriklindberg.github.io/savvy-chef/',
-    repoLink: 'https://github.com/username/project1',
-    image: '2023-04-13 23.03.34.gif',
-    altText: 'Project1',
-  },
-  {
-    title: 'Project 2',
-    description: 'Project 2 description',
-    demoLink: 'https://memomates.herokuapp.com/login',
-    repoLink: 'https://github.com/username/project2',
-    image: 'Screenshot 2023-05-11 105012.png',
-    altText: 'Project2',
-  },
-  {
-    title: 'Project 3',
-    description: 'Project 3 description',
-    demoLink: 'https://budgetbetter.herokuapp.com/',
-    repoLink: 'https://github.com/sheaschwenn/budget-better',
-    image: 'project3.png',
-    altText: 'Project3',
-  },    
-  {
-    title: 'Social Network Backend API Endpoints',
-    description: 'Project 4 description',
-    demoLink: 'https://github.com/DidrikLindberg/social-network-API',
-    repoLink: 'https://github.com/username/social-network-API',
-    image: 'coming-soon.png',
-    altText: 'Project4',
-  },    {
-      title: 'Full Stack E-Commerce MVC',
-      description: 'Project 5 description',
-      demoLink: 'https://github.com/DidrikLindberg/full-stack-e-commerce-mvc',
-      repoLink: 'https://github.com/DidrikLindberg/full-stack-e-commerce-mvc',
-      image: 'coming-soon.png',
-
-      altText: 'Project5',
-    },    {
-      title: 'Tech Blog',
-      description: 'Project 6 description',
-      demoLink: 'https://github.com/DidrikLindberg/tech-blog',
-      repoLink: 'https://github.com/DidrikLindberg/tech-blog',
-      image: 'coming-soon.png',
-
-      altText: 'Project6',
+  
+    {
+      title: 'Pet Supply E-Commerce Site',
+      description: 'A modern e-commerce platform for pet supplies.',
+      techStack: 'React, Node.js, Express, MongoDB',
+      demoLink: 'https://didriklindberg.github.io/savvy-chef/',
+      repoLink: 'https://github.com/username/project1',
+      image: 'dog e-com.png',
+      altText: 'Project1',
+    },
+    {
+      title: 'Cleaning Service Website',
+      description: 'A website for booking cleaning services.',
+      techStack: 'React, Node.js, Express, MongoDB',
+      demoLink: 'https://memomates.herokuapp.com/login',
+      repoLink: 'https://github.com/username/project2',
+      image: 'Screenshot 2023-05-11 105012.png',
+      altText: 'Project2',
+    },
+    {
+      title: 'Personal Finance App',
+      description: 'An app to manage personal finances and expenses.',
+      techStack: 'React, Node.js, Express, MongoDB',
+      demoLink: 'https://budgetbetter.herokuapp.com/',
+      repoLink: 'https://github.com/sheaschwenn/budget-better',
+      image: 'project3.png',
+      altText: 'Project3',
     },
   ];
 
-  function Portfolio() {
-    return (
-      <section id="portfolio" className="portfolio">
-        <div className="container">
-          <h1 className="sub-title">Projects</h1>
-          <div className="project-list">
-            {projects.map((project, index) => (
-              <div key={index} className="card">
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
+function Portfolio() {
+  return (
+    <section id="portfolio" className="portfolio">
+      <div className="project-container">
+        <h1 className="sub-title text-center">Featured Projects</h1>
+        <div className="project-list d-flex justify-content-center flex-wrap">
+          {projects.map((project, index) => (
+            <div key={index} className="project-card text-center ">
+              <div className="project-circle">
                 <a href={project.demoLink}>
                   <img
                     src={process.env.PUBLIC_URL + `/assets/images/${project.image}`}
                     alt={project.altText}
+                    className="img-fluid rounded-circle project-image"
                   />
                 </a>
+              </div>
+              <h3 className="mt-3">{project.title}</h3>
+              <p>{project.description}</p>
+              <div className="tech-stack">
+                <p>{project.techStack}</p>
+              </div>
+              <div className="repo-link mt-3">
                 <a
                   href={project.repoLink}
-                  className="repo-link"
                   style={{ textDecoration: 'none', color: 'black' }}
                 >
                   <FontAwesomeIcon icon={faGithub} /> View Repository
                 </a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </section>
-    );
-  }
-  
-  export default Portfolio;
+      </div>
+    </section>
+  );
+}
+
+export default Portfolio;

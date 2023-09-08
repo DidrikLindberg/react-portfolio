@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
-
 function Header() {
   const [scrollingUp, setScrollingUp] = useState(true); // Track scrolling direction
 
@@ -22,15 +20,13 @@ function Header() {
 
   return (
     <header className={`header ${scrollingUp ? 'visible' : ''}`}>
-      <div className="logo-container">
-        <img className="logo" src={process.env.PUBLIC_URL + '/assets/images/logo.png'} alt="Logo" />
-      </div>
       <ul className="nav-list">
         <li><a className="nav-link" href="#about">About</a></li>
-        <li><a className="nav-link" href="#portfolio">Portfolio</a></li>
-        <li><a className="nav-link" href="#contact">Contact</a></li>
-        <li><a className="nav-link" href="#resume">Resume</a></li>
+        <li><a className="nav-link" href="#portfolio">Projects</a></li>
       </ul>
+      <div className="header-title">
+        Didrik Lindberg
+      </div>
     </header>
   );
 }

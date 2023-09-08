@@ -86,51 +86,72 @@ function ContactForm() {
   };
 
   return (
-    <section id="contact">
-      <div className="container">
-        <h1 className="sub-title">Contact</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={name}
-              onChange={handleNameChange}
-              onBlur={handleNameBlur}
-              required
-            />
-            {nameError && <p className="error">Name is required</p>}
+    <section id="contact" className="py-5" style={{ background: '#f9f9f9' }}>
+      <div className="container py-5">
+        <h2 className="text-center mb-4">Contact Me</h2>
+        <div className="row justify-content-center">
+          <div className="col-md-6">
+            <form onSubmit={handleSubmit}>
+              <div className="mb-3">
+                <label htmlFor="name" className="form-label">
+                  Name:
+                </label>
+                <input
+                  type="text"
+                  className={`form-control ${nameError ? 'is-invalid' : ''}`}
+                  id="name"
+                  name="name"
+                  value={name}
+                  onChange={handleNameChange}
+                  onBlur={handleNameBlur}
+                  required
+                />
+                {nameError && <div className="invalid-feedback">Name is required</div>}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email" className="form-label">
+                  Email:
+                </label>
+                <input
+                  type="email"
+                  className={`form-control ${emailError ? 'is-invalid' : ''}`}
+                  id="email"
+                  name="email"
+                  value={email}
+                  onChange={handleEmailChange}
+                  onBlur={handleEmailBlur}
+                  required
+                />
+                {emailError && (
+                  <div className="invalid-feedback">Please use a valid email address</div>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="message" className="form-label">
+                  Message:
+                </label>
+                <textarea
+                  className={`form-control ${messageError ? 'is-invalid' : ''}`}
+                  id="message"
+                  name="message"
+                  value={message}
+                  onChange={handleMessageChange}
+                  onBlur={handleMessageBlur}
+                  required
+                />
+                {messageError && <div className="invalid-feedback">Message is required</div>}
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Submit
+              </button>
+            </form>
+            {isSubmitted && (
+              <div className="alert alert-success mt-3" role="alert">
+                Submitted!
+              </div>
+            )}
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={email}
-              onChange={handleEmailChange}
-              onBlur={handleEmailBlur}
-              required
-            />
-            {emailError && <p className="error">Please use a valid email address</p>}
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              value={message}
-              onChange={handleMessageChange}
-              onBlur={handleMessageBlur}
-              required
-            />
-            {messageError && <p className="error">Message is required</p>}
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-        {isSubmitted && <div className="success-toast">Submitted!</div>}
+        </div>
       </div>
     </section>
   );
