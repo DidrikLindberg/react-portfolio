@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function ContactForm() {
   const [name, setName] = useState('');
@@ -85,71 +87,100 @@ function ContactForm() {
     return regex.test(email);
   };
 
+  const backgroundStyle = {
+    backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/pastel1.jpg)`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+  };
+
+  const formStyle = {
+    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Adjust the alpha (0.9) to control the transparency
+    padding: '20px', // Adjust the padding as needed
+  };
+
   return (
-    <section id="contact" className="py-5" style={{ background: '#f9f9f9' }}>
-      <div className="container py-5">
+    <section id="contact" className="contact-section py-4" style={backgroundStyle}>
+      <div className="container py-4">
         <h2 className="text-center mb-4">Contact Me</h2>
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">
-                  Name:
-                </label>
-                <input
-                  type="text"
-                  className={`form-control ${nameError ? 'is-invalid' : ''}`}
-                  id="name"
-                  name="name"
-                  value={name}
-                  onChange={handleNameChange}
-                  onBlur={handleNameBlur}
-                  required
-                />
-                {nameError && <div className="invalid-feedback">Name is required</div>}
-              </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email:
-                </label>
-                <input
-                  type="email"
-                  className={`form-control ${emailError ? 'is-invalid' : ''}`}
-                  id="email"
-                  name="email"
-                  value={email}
-                  onChange={handleEmailChange}
-                  onBlur={handleEmailBlur}
-                  required
-                />
-                {emailError && (
-                  <div className="invalid-feedback">Please use a valid email address</div>
+            <a
+              href="YOUR_CALENDLY_LINK_HERE"
+              className="btn btn-primary btn-block btn-schedule-call"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faPhone} className="me-2" />
+              Schedule a Call
+            </a>
+          </div>
+          <div className="col-md-6">
+            <div className="card">
+              <div className="card-body" style={formStyle}>
+                <h3 className="card-title">Or Send Me a Message</h3>
+                <form className="contact-form" onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label">
+                      Name:
+                    </label>
+                    <input
+                      type="text"
+                      className={`form-control ${nameError ? 'is-invalid' : ''}`}
+                      id="name"
+                      name="name"
+                      value={name}
+                      onChange={handleNameChange}
+                      onBlur={handleNameBlur}
+                      required
+                    />
+                    {nameError && <div className="invalid-feedback">Name is required</div>}
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label">
+                      Email:
+                    </label>
+                    <input
+                      type="email"
+                      className={`form-control ${emailError ? 'is-invalid' : ''}`}
+                      id="email"
+                      name="email"
+                      value={email}
+                      onChange={handleEmailChange}
+                      onBlur={handleEmailBlur}
+                      required
+                    />
+                    {emailError && (
+                      <div className="invalid-feedback">Please use a valid email address</div>
+                    )}
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="message" className="form-label">
+                      Message:
+                    </label>
+                    <textarea
+                      className={`form-control ${messageError ? 'is-invalid' : ''}`}
+                      id="message"
+                      name="message"
+                      value={message}
+                      onChange={handleMessageChange}
+                      onBlur={handleMessageBlur}
+                      required
+                    />
+                    {messageError && <div className="invalid-feedback">Message is required</div>}
+                  </div>
+                  <button type="submit" className="btn btn-primary">
+                    Submit
+                  </button>
+                </form>
+                {isSubmitted && (
+                  <div className="alert alert-success mt-3" role="alert">
+                    Submitted!
+                  </div>
                 )}
               </div>
-              <div className="mb-3">
-                <label htmlFor="message" className="form-label">
-                  Message:
-                </label>
-                <textarea
-                  className={`form-control ${messageError ? 'is-invalid' : ''}`}
-                  id="message"
-                  name="message"
-                  value={message}
-                  onChange={handleMessageChange}
-                  onBlur={handleMessageBlur}
-                  required
-                />
-                {messageError && <div className="invalid-feedback">Message is required</div>}
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Submit
-              </button>
-            </form>
-            {isSubmitted && (
-              <div className="alert alert-success mt-3" role="alert">
-                Submitted!
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </div>

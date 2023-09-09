@@ -130,6 +130,13 @@ header {
     margin-bottom: 20px;
   }
 
+  .homepage-image-container {
+
+    background-size: cover;
+    border-radius: 20px; /* Apply rounded corners to the container */
+    overflow: hidden; /* Hide any content that overflows the rounded corners */
+  }
+
 
 
 /* -------------------------homepage--------------------- */
@@ -158,7 +165,7 @@ header {
 
 /* Adjust circle size */
 .portfolio {
-  background-color: #fff4f4; /* Pastel yellow background color */
+  background-color: #dcd8d8; /* Pastel yellow background color */
   padding: 80px 0; /* Adjust the padding as needed */
   font-family: 'Poppins', sans-serif;
 
@@ -199,52 +206,59 @@ header {
     max-width: 100%;
   }
 
-  .project-circle {
-    width: 150px;
-    height: 150px;
-  }
+
+}
+.project-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 8px solid #2214499f; /* Add a purple border around the circle */
+  transition: border-color 0.3s; /* Add a transition for border-color changes */
 }
 
-
-
+.project-circle:hover {
+  border-color: #221449; /* Change the border color on hover */
+}
 /* -------------------------about------------------------ */
 #about-me {
-  position: relative; /* Add this to establish a positioning context for the overlay */
-  background-color: #aeadad; /* Slightly dark gray background */
-  padding: 80px 0; /* Adjust the padding as needed */
-  overflow: hidden; /* Hide content that overflows the section */
+  position: relative;
+  background-color: #aeadad;
+  padding: 80px 0;
+  overflow: hidden;
 }
 
 .about-card,
 .skills-card {
-  position: relative; /* Add this to establish a positioning context for the overlay */
-  background-color: #ffffff; /* White background for cards */
-  padding: 30px; /* Padding inside the cards */
-  border-radius: 10px; /* Rounded corners for cards */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.6); /* Increased transparency */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .section-title {
-  font-size: 28px; /* Title font size */
-  color: #333; /* Title text color */
-  margin-bottom: 20px; /* Space below the title */
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .lead {
-  font-size: 18px; /* Lead font size */
-  color: #555; /* Lead text color */
+  font-size: 18px;
+  color: #555;
 }
 
 .list-unstyled {
-  padding-left: 0; /* Remove list padding */
-  margin-top: 20px; /* Space above the skills list */
+  padding-left: 0;
+  margin-top: 20px;
 }
 
 .list-unstyled li {
-  margin-bottom: 10px; /* Space between list items */
-  font-size: 16px; /* List item font size */
-  color: #333; /* List item text color */
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
 }
+
 
 /* Add media query for small screens */
 @media (max-width: 767px) {
@@ -320,3 +334,50 @@ header {
 }
 
 
+/* ---------------------------Contact-------------------- */
+
+
+.contact-section {
+  background-color: rgba(220, 216, 216, 0.9); /* Adjust the alpha (0.9) to control the transparency */
+  padding: 40px 0; /* Adjust the top and bottom padding as needed to make the section shorter */
+}
+
+.btn-schedule-call {
+  font-size: 20px; /* Increase the font size to make the button bigger */
+  padding: 15px 40px; /* Increase the padding to make the button larger */
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.5); /* Adjust the alpha (0.9) to control the transparency */
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+
+
+
+/* -----------------footer------------------------ */
+
+.footer-container {
+  background-color: #221449; /* Slightly dark gray background */
+  padding: 20px 0; /* Remove all padding */
+  font-family: 'Poppins', sans-serif;
+  border-top: none; /* Remove top border */
+  border-bottom: none; /* Remove bottom border */
+}
+
+/* Increase the size of social icons for better visibility */
+.icon {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #06478d;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+}

@@ -32,7 +32,7 @@ function Homepage() {
             <div className="homepage-content" style={textStyle}>
               <h1 className="homepage-title text-white display-4">Full Stack Developer</h1>
               <p className="homepage-description text-white lead">
-                I am a Full Stack Developer with a passion for crafting user-friendly digital experiences.
+              I bring ideas to life with clean and functional web development, creating seamless digital experiences.
               </p>
               <button className="btn btn-primary">View Projects</button>
             </div>
