@@ -24,9 +24,7 @@ function Header() {
         <li><a className="nav-link" href="#about">About</a></li>
         <li><a className="nav-link" href="#portfolio">Projects</a></li>
       </ul>
-      <div className="header-title">
-        Didrik Lindberg
-      </div>
+
     </header>
   );
 }

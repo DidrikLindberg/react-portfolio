@@ -7,6 +7,7 @@ function Homepage() {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
+    height: '75vh',
   };
 
   const overlayStyle = {
@@ -30,11 +31,11 @@ function Homepage() {
         <div className="row align-items-center">
           <div className="col-lg-8">
             <div className="homepage-content" style={textStyle}>
-              <h1 className="homepage-title text-white display-4">Full Stack Developer</h1>
+              <h1 className="homepage-title text-white display-4">Didrik Lindberg</h1>
               <p className="homepage-description text-white lead">
-              I bring ideas to life with clean and functional web development, creating seamless digital experiences.
+              Bringing ideas to life with clean and functional web development, creating seamless digital experiences.
               </p>
-              <button className="btn btn-primary">View Projects</button>
+              <a className="btn btn-primary" href="#contact">Get in Touch</a>
             </div>
           </div>
           <div className="col-lg-6">

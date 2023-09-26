@@ -87,39 +87,37 @@ function ContactForm() {
     return regex.test(email);
   };
 
-  const backgroundStyle = {
+ 
+  const sectionStyle = {
     backgroundImage: `url(${process.env.PUBLIC_URL}/assets/images/pastel1.jpg)`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
+    minHeight: '500px', // Set a minimum height to ensure content visibility
   };
 
   const formStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Adjust the alpha (0.9) to control the transparency
-    padding: '20px', // Adjust the padding as needed
+    backgroundColor: 'rgba(255, 255, 255, 0.85)', // Semi-transparent background
+    padding: '20px',
+    borderRadius: '10px',
+    boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)',
+    marginBottom: '20px', // Add space between the form and button
+  };
+
+  const buttonStyle = {
+    marginTop: '20px', // Move the button below the form
   };
 
   return (
-    <section id="contact" className="contact-section py-4" style={backgroundStyle}>
+    <section id="contact" className="contact-section py-4" style={sectionStyle}>
       <div className="container py-4">
         <h2 className="text-center mb-4">Contact Me</h2>
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <a
-              href="YOUR_CALENDLY_LINK_HERE"
-              className="btn btn-primary btn-block btn-schedule-call"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faPhone} className="me-2" />
-              Schedule a Call
-            </a>
-          </div>
-          <div className="col-md-6">
-            <div className="card">
-              <div className="card-body" style={formStyle}>
-                <h3 className="card-title">Or Send Me a Message</h3>
+            <div className="card" style={formStyle}>
+              <div className="card-body">
+                <h3 className="card-title">Send Me a Message</h3>
                 <form className="contact-form" onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label">
@@ -180,6 +178,17 @@ function ContactForm() {
                   </div>
                 )}
               </div>
+            </div>
+            <div className="col-md-12 text-center" style={buttonStyle}>
+              <a
+                href="YOUR_CALENDLY_LINK_HERE"
+                className="btn btn-primary btn-schedule-call"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faPhone} className="me-2" />
+                Schedule a Call
+              </a>
             </div>
           </div>
         </div>
