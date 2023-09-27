@@ -33,14 +33,17 @@ function AboutMe() {
             <div className="about-card p-4">
               <h2 className="section-title">About Me</h2>
               <p className="lead">
-                Hello! I'm Didrik, a passionate Full-Stack Developer with a strong
+                I am a passionate Full-Stack Developer with a strong
                 foundation in web and software development.
               </p>
               <p>
-                I'm on a mission to create digital experiences that are not only functional
-                but also beautifully crafted. My love for coding goes beyond just writing
-                lines of code; it's about solving real-world problems and making a positive
-                impact.
+              I am a creative and skilled developer with a passion for building products that 
+              make a difference. I specialize in web development and I am excited about the 
+              potential of AI and machine learning to revolutionize the way we build and use 
+              software. I am constantly exploring new ways to integrate AI and ML into my 
+              projects, and I am always looking for new challenges.
+
+
               </p>
             </div>
           </div>
